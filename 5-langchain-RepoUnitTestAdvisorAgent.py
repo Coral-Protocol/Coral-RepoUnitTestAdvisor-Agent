@@ -19,7 +19,6 @@ from anyio import ClosedResourceError
 import urllib.parse
 import base64
 import subprocess
-from langchain_groq import ChatGroq
 
 
 # Setup logging
@@ -31,7 +30,7 @@ load_dotenv()
 
 base_url = "http://localhost:5555/devmode/exampleApplication/privkey/session1/sse"
 params = {
-    "waitForAgents": 6,
+    "waitForAgents": 1,
     "agentId": "repo_unit_test_advisor_agent",
     "agentDescription": """I am `repo_unit_test_advisor_agent`, responsible for evaluating whether the unit tests in a specified GitHub repository and branch sufficiently cover the necessary aspects of **specific target files**, and if additional tests are needed.
                            You need to let me know repo_name (not local project path), branch_name (not PR number), and the target files in this repo"""
