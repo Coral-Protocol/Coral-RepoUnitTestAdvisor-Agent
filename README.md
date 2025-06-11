@@ -1,8 +1,8 @@
-### Responsibility
+## Responsibility
 
 Repo unit test advisor agent helps you evaluate whether the unit tests in a given GitHub repository and branch sufficiently cover specific target files, and advises if additional tests are needed. Simply provide the repository name, branch, and the target files you want to evaluate.
 
-### Details
+## Details
 
 * Framework: LangChain
 * Tools used: PyGithub List File Tool, PyGithub Read File Tool, Coral Server Tools
