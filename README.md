@@ -83,7 +83,7 @@ This command will read the `pyproject.toml` file and install all specified depen
 
 </details>
 
-###2. Configure Environment Variables
+### 2. Configure Environment Variables
 
 <details>
 
@@ -106,7 +106,7 @@ Required environment variables:
 
 </details>
   
-###3. Run Agent
+### 3. Run Agent
 
 <details>
 Run the agent using `uv`:
@@ -115,7 +115,7 @@ uv run 5-langchain-RepoUnitTestAdvisorAgent.py
 ```
 </details>
 
-###4. Example
+### 4. Example
 
 <details>
 
