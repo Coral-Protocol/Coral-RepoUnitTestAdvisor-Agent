@@ -10,30 +10,11 @@ Repo unit test advisor agent helps you evaluate whether the unit tests in a give
 * Date added: 02/05/25
 * Licence: MIT
 
-## Clone & Install Dependencies
+## Use the Agent
 
-1. Run [Coral Server](https://github.com/Coral-Protocol/coral-server)
-<details>
+### 1. Clone & Install Dependencies
 
-
-This agent runs on Coral Server, follow the instrcutions below to run the server. In a new terminal clone the repository:
-
-
-```bash
-git clone https://github.com/Coral-Protocol/coral-server.git
-```
-
-Navigate to the project directory:
-```bash
-cd coral-server
-```
-Run the server
-```bash
-./gradlew run
-```
-</details>
-
-2. Run [Interface Agent](https://github.com/Coral-Protocol/Coral-Interface-Agent)
+Run [Interface Agent](https://github.com/Coral-Protocol/Coral-Interface-Agent)
 <details>
 
 
@@ -69,7 +50,7 @@ uv run python 0-langchain-interface.py
 
 </details>
 
-3. Agent Installation
+Agent Installation
 
 <details>
 
@@ -102,7 +83,9 @@ This command will read the `pyproject.toml` file and install all specified depen
 
 </details>
 
-### Configure Environment Variables
+###2. Configure Environment Variables
+
+<details>
 
 Copy the example file and update it with your credentials:
 
@@ -120,22 +103,32 @@ Required environment variables:
 
 * **GITHUB_ACCESS_TOKEN:**
   Log in to [github.com](https://github.com/), go to **Settings → Developer settings → Personal access tokens**, then “Generate new token,” select the required scopes, and copy the generated token.
+
+</details>
   
-## Run Agent
+###3. Run Agent
+
+<details>
 Run the agent using `uv`:
 ```bash
 uv run 5-langchain-RepoUnitTestAdvisorAgent.py
 ```
+</details>
 
-### Example Input/output
+###4. Example
+
+<details>
 
 Repo unit test advisor agent is supposed to take target changed file as input, sp please also run [Code diffs review agent](https://github.com/Coral-Protocol/Coral-CodeDiffReview-Agent) to get proper input.
+
+Input:
 
 ```bash
 #Send message to the interface agent:
 I created a new branch, `new-semantic-scholar-toolkit`, in the repository `renxinxing123/camel-software-testing` and opened a new pull request (#3). For the changed files, could you please help me check whether the corresponding unit tests fully cover all necessary cases? Are there any additional tests that should be added?
 ```
 
+Output:
 ```bash
 **Coverage Report for `camel/toolkits/new_semantic_scholar_toolkit.py` and its tests**
 
@@ -179,7 +172,9 @@ The corresponding test file, `test/toolkits/new_test_semantic_scholar_functions.
 The unit tests provide thorough coverage of the toolkit's API interaction logic, error handling, and function registration. Only minor improvements are suggested for file output and input validation edge cases. No additional tests are strictly required for the renaming, as the logic and coverage remain unchanged.
 ```
 
-### Creator details
+</details>
+
+## Creator details
 
 * Name: Xinxing
 * Affiliation: Coral Protocol
