@@ -114,6 +114,7 @@ Required environment variables:
 ### 3. Run Agent
 
 <details>
+  
 Run the agent using `uv`:
   
 ```bash
