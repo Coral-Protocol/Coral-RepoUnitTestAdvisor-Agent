@@ -19,7 +19,7 @@ The RepoUnitTestAdvisor Agent analyzes test coverage for target files in a repos
 
 <details>  
 
-Ensure that the [Coral Server](https://github.com/Coral-Protocol/coral-server) is running on your system and the [Interface Agent](https://github.com/Coral-Protocol/Coral-Interface-Agent) is running on the Coral Server.  
+Ensure that the [Coral Server](https://github.com/Coral-Protocol/coral-server) is running on your system and the [Interface Agent](https://github.com/Coral-Protocol/Coral-Interface-Agent) is running on the Coral Server  
 
 ```bash
 # Clone the RepoUnitTestAdvisor Agent repository
