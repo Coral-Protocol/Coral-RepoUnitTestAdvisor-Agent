@@ -19,6 +19,7 @@ from anyio import ClosedResourceError
 import urllib.parse
 import base64
 import subprocess
+from langchain_core.messages import HumanMessage, AIMessage
 
 
 # Setup logging
@@ -28,7 +29,7 @@ logger = logging.getLogger(__name__)
 # Load environment variables
 load_dotenv()
 
-base_url = "http://localhost:5555/devmode/exampleApplication/privkey/session1/sse"
+base_url = os.getenv("CORAL_SERVER_URL")
 params = {
     "waitForAgents": 1,
     "agentId": "repo_unit_test_advisor_agent",
