@@ -29,11 +29,13 @@ logger = logging.getLogger(__name__)
 # Load environment variables
 load_dotenv()
 
-base_url = os.getenv("CORAL_SERVER_URL")
+base_url = os.getenv("CORAL_SSE_URL")
+agentID = os.getenv("CORAL_AGENT_ID")
+
 params = {
-    "waitForAgents": 1,
-    "agentId": "repo_unit_test_advisor_agent",
-    "agentDescription": """I am `repo_unit_test_advisor_agent`, responsible for evaluating whether the unit tests in a specified GitHub repository and branch sufficiently cover the necessary aspects of **specific target files**, and if additional tests are needed.
+    #"waitForAgents": 1,
+    "agentId": agentID,
+    "agentDescription": """An agent responsible for evaluating whether the unit tests in a specified GitHub repository and branch sufficiently cover the necessary aspects of **specific target files**, and if additional tests are needed.
                            You need to let me know repo_name (not local project path), branch_name (not PR number), and the target files in this repo"""
 }
 query_string = urllib.parse.urlencode(params)
